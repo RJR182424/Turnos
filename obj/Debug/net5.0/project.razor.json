@@ -15619,6 +15619,11 @@
   "RootNamespace": "Turnos",
   "Documents": [
     {
+      "FilePath": "c:\\Turnos\\Views\\Especialidad\\Edit.cshtml",
+      "TargetPath": "Views\\Especialidad\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Turnos\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -15641,6 +15646,16 @@
     {
       "FilePath": "c:\\Turnos\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Turnos\\Views\\Especialidad\\Create.cshtml",
+      "TargetPath": "Views\\Especialidad\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Turnos\\Views\\Especialidad\\Delete.cshtml",
+      "TargetPath": "Views\\Especialidad\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
