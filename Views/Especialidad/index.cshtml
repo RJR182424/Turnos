@@ -1,0 +1,21 @@
+@model IEnumerable<Turnos.Models.Especialidad>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @*Aqui colocaremos, mas adelante para pmodtrar registro de la base de datos*@
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
