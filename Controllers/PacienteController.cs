@@ -14,5 +14,35 @@ namespace Turnos.Controllers{
         public async Task<IActionResult> Index(){
             return View(await _context.Paciente.ToListAsync());
         }
+
+        public async Task<IActionResult> Details(int? id){
+            if(id == null){
+                return NotFound();
+            }
+            var paciente = await _context.Paciente.FirstOrDefaultAsync(p => p.IdPaciente == id);
+            if(paciente == null){
+                return NotFound();
+            }
+            return View(paciente);
+        }
+
+        /*Iniciamos el proceso de crear*/
+        public IActionResult Create(){
+            return View();
+        }
+        /*------------------- FINALIZAMOS el proceso de crear --------------------*/
+
+        /*Iniciamos el proceso de crear en forma POST*/
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("IdPaciente, Nombre, Apellidos, Direccion, Telefono, Email")] Paciente paciente){
+            if(ModelState.IsValid){
+                _context.Add(paciente);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+        /*------------------- FINALIZAMOS el proceso de crear en forma POST --------------------*/
     }
 }

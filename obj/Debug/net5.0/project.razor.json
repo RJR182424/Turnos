@@ -15619,6 +15619,11 @@
   "RootNamespace": "Turnos",
   "Documents": [
     {
+      "FilePath": "c:\\Turnos\\Views\\Paciente\\Create.cshtml",
+      "TargetPath": "Views\\Paciente\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Turnos\\Views\\Especialidad\\Edit.cshtml",
       "TargetPath": "Views\\Especialidad\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15641,6 +15646,11 @@
     {
       "FilePath": "c:\\Turnos\\Views\\Especialidad\\index.cshtml",
       "TargetPath": "Views\\Especialidad\\index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Turnos\\Views\\Paciente\\index.cshtml",
+      "TargetPath": "Views\\Paciente\\index.cshtml",
       "FileKind": "mvc"
     },
     {
