@@ -1,9 +1,5 @@
 @model IEnumerable<Turnos.Models.Medico>
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -15,7 +11,12 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table border="1" style=”width: 100%” >
+    <colgroup>
+        <col style="width: 10%" />
+        <col style="width: 10%" />
+        <col style="width: 10%" />
+    </colgroup>
     <thead>
         <tr>
             <th>
@@ -39,7 +40,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.HorarioAtencionHasta)
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -67,8 +67,12 @@
                 @Html.DisplayFor(modelItem => item.HorarioAtencionHasta)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdMedico">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdMedico">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.IdMedico">Edit</a>
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdMedico">Details</a>
+            </td>
+            <td>
                 <a asp-action="Delete" asp-route-id="@item.IdMedico">Delete</a>
             </td>
         </tr>
