@@ -1,0 +1,43 @@
+@model Turnos.Models.Paciente
+
+<title>
+    Paciente
+</title>
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Apellidos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Apellidos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Direccion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Direccion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdPaciente"> Editar </a> |
+    <a asp-action="Index">Volver</a>
+</div>
