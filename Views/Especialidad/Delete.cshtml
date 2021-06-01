@@ -1,22 +1,43 @@
 @model Turnos.Models.Especialidad
+<!DOCTYPE html>
 
-<h3>
-    ¿esta usted seguro de eliminar el siguiente registro?
-</h3>
-<div>
-    <dl>
-        <dt>
-            @Html.DisplayNameFor(modelo => modelo.Descripcion)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Descripcion)
-        </dd>
-    </dl>
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="IdEspecialidad"/>
-        <input type="submit" value="Eliminar"/>
-    </form>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Eliminar</title>
+</head>
+
+<body>
+
+    <h4>¿Seguro que desea eliminar la siguiente especialidad?</h4>
     <div>
-        <a asp-action="Index">Volver</a>
+        <h5>Especialidad</h5>
+        <hr />
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card hoverable blue lighten-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            <h5><b>@Html.DisplayNameFor(modelo => modelo.Descripcion)</b></h5>
+                        </span>
+                            <dl>
+                                <dd>
+                                    @Html.DisplayFor(modelo => modelo.Descripcion)
+                                </dd>
+                            </dl>
+                            <div class="card-action blue darken-1">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="IdEspecialidad" />
+                            <input type="submit" Value="Eliminar"
+                                class="waves-effect waves-light btn-small red lighten-1" />
+                            <a asp-action="Index" class="right">Volver</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</body>
+
+</html>
