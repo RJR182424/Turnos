@@ -1,46 +1,62 @@
 @model Turnos.Models.Paciente
+<!DOCTYPE html>
 
-<h3>
-    ¿esta usted seguro de eliminar el siguiente registro?
-</h3>
-<div>
-    <dl>
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Nombre)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Apellidos)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Direccion)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Telefono)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(modelo => modelo.Email)
-        </dd>
-    </dl>
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="IdPaciente" />
-        <input type="submit" value="Eliminar" />
-    </form>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Eliminar</title>
+</head>
+
+<body>
+
+    <h4>¿Seguro que desea eliminar el siguiente paciente?</h4>
     <div>
-        <a asp-action="Index">Volver</a>
+        <h5>Paciente</h5>
+        <hr />
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card hoverable blue lighten-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">
+                            <h5><b>@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model =>
+                                    model.Apellidos)</b></h5>
+                        </span>
+                        <dl>
+                            <dt>
+                                <h6>@Html.DisplayNameFor(model => model.Direccion):</h6>
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Direccion)
+                            </dd>
+                            <hr>
+                            <dt>
+                                <h6>@Html.DisplayNameFor(model => model.Telefono):</h6>
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Telefono)
+                            </dd>
+                            <hr>
+                            <dt>
+                                <h6>@Html.DisplayNameFor(model => model.Email):</h6>
+                            </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Email)
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="card-action blue darken-1">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="IdPaciente" />
+                            <input type="submit" Value="Eliminar"
+                                class="waves-effect waves-light btn-small red lighten-1" />
+                            <a asp-action="Index" class="right">Volver</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</body>
+
+</html>
