@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="input-field col s6">
                         <input asp-for="Descripcion" type="text" class="validate">
-                        <label asp-for="Descripcion">Descripcion:</label>
+                        <label asp-for="Descripcion">@Html.DisplayNameFor(model => model.Descripcion)</label>
                         <span asp-validation-for="Descripcion"></span>
                     </div>
                 </div>

@@ -22,43 +22,43 @@
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
                         <input asp-for="Nombre" type="text" class="validate">
-                        <label asp-for="Nombre">Nombre:</label>
+                        <label asp-for="Nombre">@Html.DisplayNameFor(model => model.Nombre)</label>
                         <span asp-validation-for="Nombre"></span>
                     </div>
                     <div class="input-field col s6">
                         <input asp-for="Apellidos" type="text" class="validate">
-                        <label asp-for="Apellidos">Apellidos:</label>
+                        <label asp-for="Apellidos">@Html.DisplayNameFor(model => model.Apellidos)</label>
                         <span asp-validation-for="Apellidos"></span>
                     </div>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">markunread_mailbox</i>
                     <input asp-for="Direccion" type="text" class="validate">
-                    <label asp-for="Direccion">Direccion:</label>
+                    <label asp-for="Direccion">@Html.DisplayNameFor(model => model.Direccion)</label>
                     <span asp-validation-for="Direccion"></span>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">phone</i>
                     <input asp-for="Telefono" type="tel" class="validate">
-                    <label asp-for="Telefono"></label>
+                    <label asp-for="Telefono">@Html.DisplayNameFor(model => model.Telefono)</label>
                     <span asp-validation-for="Telefono"></span>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">local_post_office</i>
                     <input asp-for="Email" type="email" class="validate">
-                    <label asp-for="Email"></label>
+                    <label asp-for="Email">@Html.DisplayNameFor(model => model.Email)</label>
                     <span asp-validation-for="Email"></span>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">event_note</i>
                     <input asp-for="HorarioAtencionDesde" type="text" class="timepicker">
-                    <label asp-for="HorarioAtencionDesde"></label>
+                    <label asp-for="HorarioAtencionDesde">@Html.DisplayNameFor(model => model.HorarioAtencionDesde)</label>
                     <span asp-validation-for="HorarioAtencionDesde"></span>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">event_note</i>
                     <input asp-for="HorarioAtencionHasta" type="text" class="timepicker">
-                    <label asp-for="HorarioAtencionHasta"></label>
+                    <label asp-for="HorarioAtencionHasta">@Html.DisplayNameFor(model => model.HorarioAtencionHasta)</label>
                     <span asp-validation-for="HorarioAtencionHasta"></span>
                 </div>
                 <div class="input-field col s12">
